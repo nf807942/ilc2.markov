@@ -5,6 +5,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * MarkovChain est la classe simulant une chaine de markov
+ * @author Nicolas
+ */
 public class MarkovChain {
 	
 	/** Markov chain ngram parameter (contiguous sequence of words) */
