@@ -42,12 +42,12 @@ public class MarkovDataTest {
     public void renforceWord_addWord_sizeChangeProperly() {
         MarkovData data = new MarkovData();
         
-        String word1 = "bonjour", word2 = "test";
-        
         data.learnWord("a","bonjour");
-        assertEquals(word1.length(), data.getLearnedWord("a").length());
+        // on verifie que la taille de retour est la même que "bonjour" : 7
+        assertEquals(7, data.getLearnedWord("a").length());
         data.renforceWord("a","test");
-        assertEquals(word1.length()+1+word2.length(), data.getLearnedWord("a").length());
+        // on verifie que la taille de retour est la même que "bonjour test" : 12
+        assertEquals(7+1+4, data.getLearnedWord("a").length());
     }
 
 }
